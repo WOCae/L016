@@ -10,6 +10,7 @@ func _process(delta: float) -> void:
 func _LineGene(pathName,layZ):
 	var line = Line2D.new()
 	line.z_index = layZ
+	line.width = 1
 	for point in pathName.curve.get_baked_points():
 		line.add_point(point)
 	add_child(line)
